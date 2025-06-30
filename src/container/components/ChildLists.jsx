@@ -9,12 +9,6 @@ function ChildLists({ items }) {
           {item}
         </li>
       ))}
-      {/* <li className="text-stone-100 text-sm hover:text-purple-400">
-        Companies
-      </li>
-      <li className="text-stone-100 text-sm hover:text-purple-400">User</li>
-      <li className="text-stone-100 text-sm hover:text-purple-400">Drivers</li>
-      <li className="text-stone-100 text-sm hover:text-purple-400">Orders</li> */}
     </>
   );
 }
