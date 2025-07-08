@@ -13,10 +13,8 @@ function Layout() {
   const listTextStyle = "text-sm font-normal ";
   const iconSize = "w-[22px] h-[22px] ";
 
-  console.log(displayTab);
-
   return (
-    <main className="bg-gray-900 h-screen flex justify-start text-stone-100 overflow-y-auto">
+    <main className="bg-gray-900 h-screen flex items-center justify-start text-stone-100 ">
       <Aside>
         <List
           dataSet="home"
@@ -97,7 +95,6 @@ function Layout() {
           dataSet="transportAndLogistics"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
-          setDisplayTab={setDisplayTab}
           icon={
             <Icon
               icon="fluent:vehicle-truck-bag-24-regular"
@@ -357,6 +354,7 @@ function Layout() {
           <ChildLists items={[]} />
         </List>
       </Aside>
+
       <MainArea displayTab={displayTab} />
     </main>
   );
