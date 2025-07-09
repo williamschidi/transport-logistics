@@ -9,6 +9,7 @@ import SalesTrack from "../../components/SalesTrack";
 import EmployeesData from "../../components/EmployeesData";
 import HrProfileAndNotification from "../../components/HrProfileAndNotification";
 import SearchBar from "../../components/SearchBar";
+import Spinner from "../../components/Spinner";
 
 function TransportAndLogisticsHomePage() {
   return (
@@ -37,6 +38,7 @@ function TransportAndLogisticsHomePage() {
           <EmployeesData />
         </div>
       </main>
+      {/* <Spinner /> */}
     </section>
   );
 }
