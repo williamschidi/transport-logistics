@@ -1,6 +1,14 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-function List({ children, icon, title, dataSet, setCurrentTab, currentTab }) {
+function List({
+  children,
+  icon,
+  title,
+  dataSet,
+  setCurrentTab,
+  currentTab,
+  setDisplayTab,
+}) {
   const [show, setShow] = useState(false);
 
   function handleClick(e, tab) {
@@ -8,9 +16,11 @@ function List({ children, icon, title, dataSet, setCurrentTab, currentTab }) {
       currentTab === e.target.closest("[data-tab]")?.getAttribute("data-tab")
     ) {
       setCurrentTab("");
+      setDisplayTab(tab);
       setShow(false);
     } else {
       setCurrentTab(tab);
+
       setShow(true);
     }
   }
@@ -23,7 +33,7 @@ function List({ children, icon, title, dataSet, setCurrentTab, currentTab }) {
         className={`
  hover:rounded-r-md border-l-2 border-l-gray-800 transition-all duration-200 p-2 flex items-center justify-start gap-4 hover:bg-gray-700 w-[13rem] ${
    currentTab === dataSet
-     ? "text-purple-500 border-l-2 border-l-purple-500 bg-gray-700 rounded-sm hover:rounded-r-md"
+     ? "text-purple-500 border-l-2 border-l-purple-500 bg-gray-700 rounded-sm rounded-r-md"
      : ""
  }`}
       >
@@ -31,7 +41,7 @@ function List({ children, icon, title, dataSet, setCurrentTab, currentTab }) {
       </button>
       {show && currentTab === dataSet ? (
         <ul
-          className={`w-[8rem] ml-[5rem] bg-gray-700 transform transition-all duration-200 origin-top text-sm font-normal hover:${
+          className={`w-[8rem] ml-[5rem] mt-[2px] transform transition-all duration-200 origin-top text-sm font-normal hover:${
             currentTab === dataSet
               ? "scale-y-100 opacity-100 "
               : "scale-y-0 opacity-0"
@@ -45,4 +55,4 @@ function List({ children, icon, title, dataSet, setCurrentTab, currentTab }) {
     </div>
   );
 }
-export default List;
+export default React.memo(List);

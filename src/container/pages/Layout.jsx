@@ -7,10 +7,12 @@ import { Icon } from "@iconify/react";
 import MainArea from "../components/MainArea";
 
 function Layout() {
+  const [displayTab, setDisplayTab] = useState("transportAndLogistics");
+  const [currentTab, setCurrentTab] = useState("");
+
   const listTextStyle = "text-sm font-normal ";
   const iconSize = "w-[22px] h-[22px] ";
-  const [currentTab, setCurrentTab] = useState("");
-  console.log(currentTab);
+
   return (
     <main className="bg-gray-900 h-screen flex items-center justify-start text-stone-100 ">
       <Aside>
@@ -103,7 +105,10 @@ function Layout() {
           }
           title={<span className={listTextStyle}>Transport And Logistics</span>}
         >
-          <ChildLists items={["User", "Driver", "Order"]} />
+          <ChildLists
+            items={["User", "Driver", "Order"]}
+            setDisplayTab={setDisplayTab}
+          />
         </List>
 
         <List
@@ -349,7 +354,8 @@ function Layout() {
           <ChildLists items={[]} />
         </List>
       </Aside>
-      <MainArea />
+
+      <MainArea displayTab={displayTab} />
     </main>
   );
 }
