@@ -7,9 +7,8 @@ import OrderSection from "../../components/OrderSection";
 import ActiveOffices from "../../components/ActiveOffices";
 import SalesTrack from "../../components/SalesTrack";
 import EmployeesData from "../../components/EmployeesData";
-import HrProfileAndNotification from "../../components/HrProfileAndNotification";
-import SearchBar from "../../components/SearchBar";
-import Spinner from "../../components/Spinner";
+import HrProfileAndNotification from "../../../utils/HrProfileAndNotification";
+import SearchBar from "../../../utils/SearchBar";
 
 function TransportAndLogisticsHomePage() {
   return (
@@ -38,7 +37,6 @@ function TransportAndLogisticsHomePage() {
           <EmployeesData />
         </div>
       </main>
-      {/* <Spinner /> */}
     </section>
   );
 }

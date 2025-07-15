@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 
+
+
 .custom-scrollbar::-webkit-scrollbar{
     width:4px;
 }

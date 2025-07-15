@@ -5,16 +5,16 @@ import ChildLists from "../components/ChildLists";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 import MainArea from "../components/MainArea";
+import { NavLink } from "react-router-dom";
 
 function Layout() {
-  const [displayTab, setDisplayTab] = useState("transportAndLogistics");
   const [currentTab, setCurrentTab] = useState("");
 
   const listTextStyle = "text-sm font-normal ";
   const iconSize = "w-[22px] h-[22px] ";
 
   return (
-    <main className="bg-gray-900 h-screen flex items-center justify-start text-stone-100 ">
+    <main className="bg-gray-900 max-h-screen overflow-auto flex items-start justify-start text-stone-100 ">
       <Aside>
         <List
           dataSet="home"
@@ -96,7 +96,6 @@ function Layout() {
           dataSet="transportAndLogistics"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
-          setDisplayTab={setDisplayTab}
           icon={
             <Icon
               icon="fluent:vehicle-truck-bag-24-regular"
@@ -105,11 +104,21 @@ function Layout() {
               className={iconSize}
             />
           }
-          title={<span className={listTextStyle}>Transport And Logistics</span>}
+          title={
+            <span className={listTextStyle}>
+              <NavLink to="/transportAndLogistics">
+                Transport And Logistics
+              </NavLink>
+            </span>
+          }
         >
           <ChildLists
-            items={["User", "Driver", "Order"]}
-            setDisplayTab={setDisplayTab}
+            items={[
+              { name: "Companies", path: "company" },
+              { name: "User", path: "user" },
+              { name: "Driver", path: "driver" },
+              { name: "Order", path: "order" },
+            ]}
           />
         </List>
 
@@ -357,7 +366,7 @@ function Layout() {
         </List>
       </Aside>
 
-      <MainArea displayTab={displayTab} />
+      <MainArea />
     </main>
   );
 }

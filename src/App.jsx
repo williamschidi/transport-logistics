@@ -1,10 +1,14 @@
+import { BrowserRouter } from "react-router-dom";
 import Layout from "./container/pages/Layout";
+import AppRoutes from "./Routes";
 
 function App() {
   return (
-    <div>
-      <Layout />
-    </div>
+    <BrowserRouter>
+      <AppRoutes>
+        <Layout />
+      </AppRoutes>
+    </BrowserRouter>
   );
 }
 

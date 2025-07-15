@@ -1,5 +1,5 @@
-import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
-import PageNavigation from "./PageNAvigation";
+// import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import PageNavigation from "../../utils/PageNAvigation";
 
 const data = [
   {
@@ -41,7 +41,7 @@ const data = [
 
 function DeriversDetail() {
   return (
-    <div className="w-[50%] border border-gray-600 rounded-md">
+    <div className="w-[30rem] border border-gray-600 rounded-md">
       <div className="flex justify-between items-center text-xs px-2 py-4">
         <p>Active Drivers</p>
         <p>Export Report</p>
