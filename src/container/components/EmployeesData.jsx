@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useState } from "react";
-import Button from "./Button";
-import SearchBar from "./SearchBar";
+import Button from "../../utils/Button";
+import SearchBar from "../../utils/SearchBar";
 
 const data = [
   {
@@ -81,9 +81,10 @@ function EmployeesData() {
 
         <div className="flex justify-between items-center gap-4">
           <div className="flex justify-center items-center gap-1">
-            <span className="w-[6rem] py-1 border border-gray-500 text-xs rounded-md text-center cursor-pointer text-[#0D99FF]">
+            <Button color="#0d99ff" border="none">
+              <Icon icon="la:file-excel-solid" width="12" height="12" />
               Export Report
-            </span>
+            </Button>
             <Button color="#111827" bg="#0D99FF">
               <span>&#43;</span> Add Employee
             </Button>

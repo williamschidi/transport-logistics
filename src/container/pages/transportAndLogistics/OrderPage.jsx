@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Action from "../../components/Action";
-import Button from "../../components/Button";
-import HrProfileAndNotification from "../../components/HrProfileAndNotification";
-import PageNavigation from "../../components/PageNAvigation";
-import SearchBar from "../../components/SearchBar";
-import Spinner from "../../components/Spinner";
+
+import Button from "../../../utils/Button";
+// import HrProfileAndNotification from "../../../utils/HrProfileAndNotification";
+import PageNavigation from "../../../utils/PageNAvigation";
+import SearchBar from "../../../utils/SearchBar";
+import Spinner from "../../../utils/Spinner";
+import PagesHeader from "../../../utils/PagesHeader";
 
 const orders = [
   {
@@ -16,7 +18,6 @@ const orders = [
     status: "Delivered",
     endTime: "7:40 Am",
     amount: 400,
-    action: <Action />,
   },
   {
     service: "Neighbourhood Delivery",
@@ -27,7 +28,6 @@ const orders = [
     status: "Pending",
     endTime: "7:40 Am",
     amount: 600,
-    action: <Action />,
   },
   {
     service: "Regular Delivery",
@@ -38,7 +38,6 @@ const orders = [
     status: "Canceled",
     endTime: "7:40 Am",
     amount: 500,
-    action: <Action />,
   },
   {
     service: "Regular Delivery",
@@ -49,7 +48,6 @@ const orders = [
     status: "Delivered",
     endTime: "7:40 Am",
     amount: 100,
-    action: <Action />,
   },
   {
     service: "Regular Delivery",
@@ -60,7 +58,6 @@ const orders = [
     status: "Delivered",
     endTime: "7:40 Am",
     amount: 300,
-    action: <Action />,
   },
   {
     service: "Regular Delivery",
@@ -71,7 +68,6 @@ const orders = [
     status: "Delivered",
     endTime: "7:40 Am",
     amount: 600,
-    action: <Action />,
   },
   {
     service: "Regular Delivery",
@@ -82,7 +78,6 @@ const orders = [
     status: "Delivered",
     endTime: "7:40 Am",
     amount: 800,
-    action: <Action />,
   },
   {
     service: "Regular Delivery",
@@ -93,7 +88,6 @@ const orders = [
     status: "Delivered",
     endTime: "7:40 Am",
     amount: 50,
-    action: <Action />,
   },
   {
     service: "Regular Delivery",
@@ -104,7 +98,6 @@ const orders = [
     status: "Delivered",
     endTime: "7:40 Am",
     amount: 200,
-    action: <Action />,
   },
   {
     service: "Regular Delivery",
@@ -115,7 +108,6 @@ const orders = [
     status: "Delivered",
     endTime: "7:40 Am",
     amount: 350,
-    action: <Action />,
   },
 ];
 
@@ -132,17 +124,12 @@ function OrderPage() {
   }
 
   return (
-    <section className="flex-1 h-screen flex flex-col overflow-y-auto ">
-      <header className="flex justify-between items-center py-4 px-4">
-        <div className=" space-y-1">
-          <h3 className="text-sm font-semibold">GIG Orders</h3>
-          <p className="text-[.6rem] font-light">GIG Orders Information</p>
-        </div>
-        <div className="flex justify-center items-center gap-4">
-          <SearchBar inputWidth="13rem" py="8px" pl="32px" />
-          <HrProfileAndNotification />
-        </div>
-      </header>
+    <section className="flex-1 h-screen flex flex-col overflow-y-auto px-3 py-2">
+      <PagesHeader>
+        <h3 className="text-sm font-semibold">GIG Orders</h3>
+        <p className="text-[.6rem] font-light">GIG Orders Information</p>
+      </PagesHeader>
+
       <main className="relative px-4 py-4 border border-gray-600 rounded-md">
         <div className="flex justify-end items-center gap-4 pb-4">
           <Button
@@ -216,7 +203,7 @@ function OrderPage() {
             </div>
           </div>
 
-          <div className="flex justify-between items-center px-4 pt-14">
+          <div className="flex justify-between items-center px-4 pt-6">
             <div className="space-x-3">
               <span className="text-xs">Showing</span>
               <select className=" bg-transparent text-stone-700 border border-gray-800 rounded-md text-xs focus:outline-none py-1 px-1">

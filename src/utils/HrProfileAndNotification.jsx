@@ -1,10 +1,10 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { HiChevronDown } from "react-icons/hi";
-import image1 from "./../images/chidi.jpg";
+import image1 from "../container/images/chidi.jpg";
 
 function HrProfileAndNotification() {
   return (
-    <div className="flex justify-start items-center gap-3 px-2  ">
+    <div className="flex justify-start items-center gap-3">
       <div className="w-[2rem] h-[2rem] flex justify-center items-center bg-gray-700 rounded-md">
         <Icon icon="basil:notification-outline" width="24" height="24" />
       </div>
