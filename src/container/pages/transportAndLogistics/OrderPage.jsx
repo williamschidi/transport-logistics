@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Action from "../../components/Action";
+
 import Button from "../../../utils/Button";
-import HrProfileAndNotification from "../../../utils/HrProfileAndNotification";
+// import HrProfileAndNotification from "../../../utils/HrProfileAndNotification";
 import PageNavigation from "../../../utils/PageNAvigation";
 import SearchBar from "../../../utils/SearchBar";
 import Spinner from "../../../utils/Spinner";
@@ -128,16 +129,7 @@ function OrderPage() {
         <h3 className="text-sm font-semibold">GIG Orders</h3>
         <p className="text-[.6rem] font-light">GIG Orders Information</p>
       </PagesHeader>
-      {/* <header className="flex justify-between items-center py-4 px-4">
-        <div className=" space-y-1">
-          <h3 className="text-sm font-semibold">GIG Orders</h3>
-          <p className="text-[.6rem] font-light">GIG Orders Information</p>
-        </div>
-        <div className="flex justify-center items-center gap-4">
-          <SearchBar inputWidth="13rem" py="8px" pl="32px" />
-          <HrProfileAndNotification />
-        </div>
-      </header> */}
+
       <main className="relative px-4 py-4 border border-gray-600 rounded-md">
         <div className="flex justify-end items-center gap-4 pb-4">
           <Button
