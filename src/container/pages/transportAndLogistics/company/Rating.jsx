@@ -78,13 +78,13 @@ function Rating() {
   return (
     <div className="pl-3">
       <header className="flex justify-between items-center w-[60%]">
-        <span className="text-xs text-yellow-200 bg-orange-800 w-[4rem] h-[2rem] flex justify-center items-center rounded-md border]">
+        <span className="text-xs text-yellow-200 bg-[#7152F3] w-[4rem] h-[2rem] flex justify-center items-center rounded-md border]">
           All Rating
         </span>
         <div className="flex justify-between items-center gap-4">
           <div
             className={`w-[2.8rem] h-[2.8rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
-              ratingMetrix === 1 && "translate-y-[-10px] bg-orange-800 "
+              ratingMetrix === 1 && "translate-y-[-10px] bg-[#7152F3]"
             }`}
             onClick={() => handleClick(1)}
           >
@@ -95,7 +95,7 @@ function Rating() {
           </div>
           <div
             className={`w-[2.8rem] h-[2.8rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
-              ratingMetrix === 2 && "translate-y-[-10px] bg-orange-800"
+              ratingMetrix === 2 && "translate-y-[-10px] bg-[#7152F3]"
             }`}
             onClick={() => handleClick(2)}
           >
@@ -106,7 +106,7 @@ function Rating() {
           </div>
           <div
             className={`w-[2.8rem] h-[2.8rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
-              ratingMetrix === 3 && "translate-y-[-10px] bg-orange-800"
+              ratingMetrix === 3 && "translate-y-[-10px] bg-[#7152F3]"
             }`}
             onClick={() => handleClick(3)}
           >
@@ -117,7 +117,7 @@ function Rating() {
           </div>
           <div
             className={`w-[2.8rem] h-[2.8rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
-              ratingMetrix === 4 && "translate-y-[-10px] bg-orange-800"
+              ratingMetrix === 4 && "translate-y-[-10px] bg-[#7152F3]"
             }`}
             onClick={() => handleClick(4)}
           >
@@ -128,7 +128,7 @@ function Rating() {
           </div>
           <div
             className={`w-[2.8rem] h-[2.8rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
-              ratingMetrix === 5 && "translate-y-[-10px] bg-orange-800"
+              ratingMetrix === 5 && "translate-y-[-10px] bg-[#7152F3]"
             }`}
             onClick={() => handleClick(5)}
           >
