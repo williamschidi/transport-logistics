@@ -9,6 +9,11 @@ import Profile from "./container/pages/transportAndLogistics/company/CompanyDash
 import ProfileDetails from "./container/pages/transportAndLogistics/company/ProfileDetails";
 import Orders from "./container/pages/transportAndLogistics/company/Orders";
 import Rating from "./container/pages/transportAndLogistics/company/Rating";
+import SalesHistory from "./container/pages/transportAndLogistics/company/SalesHistory";
+import Ticket from "./container/pages/transportAndLogistics/company/Ticket";
+import Earning from "./container/pages/transportAndLogistics/company/Earning";
+import Vehicles from "./container/pages/transportAndLogistics/company/Vehicles";
+import Branches from "./container/pages/transportAndLogistics/company/Branches";
 
 function AppRoutes() {
   return (
@@ -24,11 +29,11 @@ function AppRoutes() {
           <Route path="profile" element={<ProfileDetails />} />
           <Route path="order" element={<Orders />} />
           <Route path="rating" element={<Rating />} />
-          <Route path="sellHistory" element={<ProfileDetails />} />
-          <Route path="ticket" element={<ProfileDetails />} />
-          <Route path="earning" element={<ProfileDetails />} />
-          <Route path="vehicle" element={<ProfileDetails />} />
-          <Route path="branch" element={<ProfileDetails />} />
+          <Route path="sellHistory" element={<SalesHistory />} />
+          <Route path="ticket" element={<Ticket />} />
+          <Route path="earning" element={<Earning />} />
+          <Route path="vehicle" element={<Vehicles />} />
+          <Route path="branch" element={<Branches />} />
         </Route>
         <Route path="user" element={<User />} />
         <Route path="order" element={<Order />} />

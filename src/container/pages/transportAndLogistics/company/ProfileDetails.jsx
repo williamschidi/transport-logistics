@@ -14,7 +14,7 @@ function ProfileDetails() {
 
   return (
     <>
-      <ul className="flex justify-between items-center pb-2">
+      <ul className="flex justify-between items-center pb-2 pr-3">
         <li
           className={`flex justify-center items-center gap-2 text-xs font-semibold hover:cursor-pointer pb-2 border-b-2 ${
             tab === "ownerInfo"
@@ -60,7 +60,7 @@ function ProfileDetails() {
           <span className="text-xs font-semibold">Account Access</span>
         </li>
       </ul>
-      <hr className="border-gray-600" />
+      <hr className="border-gray-600 mr-4" />
 
       <div className="w-[100%] space-y-2 py-4 max-h-[20rem] custom-scrollbar overflow-auto">
         {tab === "ownerInfo" && <OwnershipDetails />}
