@@ -103,7 +103,7 @@ data.map((d) =>
 function Orders() {
   return (
     <>
-      <div className="flex-1 flex justify-between items-center px-2 py-2 bg-[#4D6A3F] text-sm font-semibold">
+      <div className="flex-1 flex justify-between items-center px-2 py-2 bg-[#4D6A3F] text-sm font-semibold mb-2">
         <div className="px-2 w-[45%] flex justify-between items-center">
           <span>Completed</span>
           <span>Status</span>

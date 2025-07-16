@@ -14,7 +14,7 @@ function CompanyInfo() {
           </span>
         </div>
       </div>
-      <hr className="border-gray-600" />
+      <hr className="border-gray-600 mr-4" />
 
       <div className="flex justify-between items-center gap-6  w-[80%] py-1">
         <div className="flex flex-col gap-1">
@@ -28,7 +28,7 @@ function CompanyInfo() {
           </span>
         </div>
       </div>
-      <hr className="border-gray-600" />
+      <hr className="border-gray-600 mr-4" />
       <div className="flex justify-between items-center gap-6 w-[80%] py-1">
         <div className="flex flex-col gap-1">
           <span className="text-xs font-light w-[10rem]">Registration </span>
@@ -39,7 +39,7 @@ function CompanyInfo() {
           <span className="text-xs font-semibold w-[10rem]">Terminal</span>
         </div>
       </div>
-      <hr className="border-gray-600" />
+      <hr className="border-gray-600 mr-4" />
       <div className="flex justify-between items-center gap-6  w-[80%] py-1">
         <div className="flex flex-col gap-1">
           <span className="text-xs font-light w-[10rem]">Working Days</span>
@@ -50,7 +50,7 @@ function CompanyInfo() {
           <span className="text-xs font-semibold w-[10rem]">July 10 2020</span>
         </div>
       </div>
-      <hr className="border-gray-600" />
+      <hr className="border-gray-600 mr-4" />
       <div className="flex justify-between items-center gap-6  w-[80%] py-1">
         <div className="flex flex-col gap-1">
           <span className="text-xs font-light">Office Location</span>
@@ -59,7 +59,7 @@ function CompanyInfo() {
           </span>
         </div>
       </div>
-      <hr className="border-gray-600" />
+      <hr className="border-gray-600 mr-4" />
     </>
   );
 }
