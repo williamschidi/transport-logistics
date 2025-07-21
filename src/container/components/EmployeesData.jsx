@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useState } from "react";
-import Button from "../../utils/Button";
-import SearchBar from "../../utils/SearchBar";
+import Button from "../utils/Button";
+import SearchBar from "../utils/SearchBar";
 
 const data = [
   {

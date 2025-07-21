@@ -8,8 +8,8 @@ import ActiveOffices from "../../components/ActiveOffices";
 import SalesTrack from "../../components/SalesTrack";
 import EmployeesData from "../../components/EmployeesData";
 
-import HrProfileAndNotification from "../../../utils/HrProfileAndNotification";
-import SearchBar from "../../../utils/SearchBar";
+import HrProfileAndNotification from "../../utils/HrProfileAndNotification";
+import SearchBar from "../../utils/SearchBar";
 
 function TransportAndLogisticsHomePage() {
   return (

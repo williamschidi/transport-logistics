@@ -1,12 +1,10 @@
 import { useState } from "react";
 import Action from "../../components/Action";
 
-import Button from "../../../utils/Button";
-// import HrProfileAndNotification from "../../../utils/HrProfileAndNotification";
-import PageNavigation from "../../../utils/PageNAvigation";
-import SearchBar from "../../../utils/SearchBar";
-import Spinner from "../../../utils/Spinner";
-import PagesHeader from "../../../utils/PagesHeader";
+import Button from "../../utils/Button";
+import Spinner from "../../utils/Spinner";
+import PagesHeader from "../../utils/PagesHeader";
+import FooterNavigation from "../../utils/FooterNavigation";
 
 const orders = [
   {
@@ -203,28 +201,14 @@ function OrderPage() {
             </div>
           </div>
 
-          <div className="flex justify-between items-center px-4 pt-6">
-            <div className="space-x-3">
-              <span className="text-xs">Showing</span>
-              <select className=" bg-transparent text-stone-700 border border-gray-800 rounded-md text-xs focus:outline-none py-1 px-1">
-                {Array.from({ length: 10 }, (_, i) => (
-                  <option className="text-xs" key={i}>
-                    {i + 1}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <p className="text-xs">Showing 1 of 10 out of 60 records</p>
-
-            <PageNavigation
-              num={4}
-              color="#f5f5f4"
-              bg="transparent"
-              activeColor="#7152F3"
-              activeBg="transparent"
-              borderColor="#7152F3"
-            />
-          </div>
+          <FooterNavigation
+            num={4}
+            color="#f5f5f4"
+            bg="transparent"
+            activeColor="#7152F3"
+            activeBg="transparent"
+            borderColor="#7152F3"
+          />
         </div>
         {isLoading && (
           <div className="absolute inset-0 z-10 flex justify-center items-center bg-black bg-opacity-30">
