@@ -88,7 +88,7 @@ function Map() {
       } else {
         clearInterval(interval);
       }
-    }, 1000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -97,7 +97,7 @@ function Map() {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={position}
-        zoom={7}
+        zoom={8}
         options={{ styles: customMapStyle }}
       >
         <Marker
@@ -132,9 +132,9 @@ function Map() {
         <Polyline
           path={path}
           options={{
-            strokeColor: "#EF4444",
+            strokeColor: "#FCA5A5",
             strokeOpacity: 0.8,
-            strokeWeight: 2,
+            strokeWeight: 1,
           }}
         />
       </GoogleMap>
