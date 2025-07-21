@@ -68,6 +68,12 @@ function ActiveOffices() {
             attribution='&copy; <a href="https://carto.com/"></a>'
           />
 
+          {/* <TileLayer
+            url="/tiles/{z}/{x}/{y}.png"
+            maxZoom={3}
+            attribution="© Custom Map"
+          /> */}
+
           <FlyToLocation
             targetPosition={
               lat && lng ? { lat: parseFloat(lat), lng: parseFloat(lng) } : null

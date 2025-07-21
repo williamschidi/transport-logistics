@@ -115,8 +115,8 @@ function Layout() {
         >
           <ChildLists
             items={[
-              { name: "Companies", path: "company" },
-              { name: "User", path: "user" },
+              { name: "Companies", path: "companies" },
+
               { name: "Driver", path: "driver" },
               { name: "Order", path: "order" },
             ]}

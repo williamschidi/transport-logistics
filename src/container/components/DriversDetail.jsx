@@ -1,5 +1,4 @@
-// import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
-import PageNavigation from "../../utils/PageNAvigation";
+import PageNavigation from "../utils/PageNavigation";
 
 const data = [
   {

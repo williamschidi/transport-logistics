@@ -1,11 +1,12 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import PagesHeader from "../../../../utils/PagesHeader";
-import SearchBar from "../../../../utils/SearchBar";
-import Button from "../../../../utils/Button";
+import PagesHeader from "../../../utils/PagesHeader";
+import SearchBar from "../../../utils/SearchBar";
+import Button from "../../../utils/Button";
 import Action from "../../../components/Action";
 import image from "../../../images/chidi.jpg";
-import PageNavigation from "../../../../utils/PageNAvigation";
 import { NavLink } from "react-router-dom";
+import FooterNavigation from "../../../utils/FooterNavigation";
+import EmployeeDetails from "./EmployeeDetails";
 
 const orders = [
   {
@@ -100,7 +101,7 @@ const orders = [
   },
 ];
 
-function CompaniesDetail() {
+function RegisteredCompanies() {
   return (
     <div className="flex-1 px-3 py-2">
       <PagesHeader>
@@ -138,7 +139,7 @@ function CompaniesDetail() {
           <div>
             {orders.map((order, i) => (
               <NavLink
-                to={`/company/${order.companyID}`}
+                to={`/companies/${order.companyID}`}
                 key={i}
                 className="flex justify-between items-center text-[.6rem] py-2 px-2 hover:bg-gray-800 border-b-[1px] border-b-gray-800 hover:cursor-pointer"
               >
@@ -174,31 +175,18 @@ function CompaniesDetail() {
             ))}
           </div>
         </div>
-        <div className="flex justify-between items-center px-4 pt-5">
-          <div className="space-x-3">
-            <span className="text-xs">Showing</span>
-            <select className=" bg-transparent text-stone-700 border border-gray-800 rounded-md text-xs focus:outline-none py-1 px-1">
-              {Array.from({ length: 10 }, (_, i) => (
-                <option className="text-xs" key={i}>
-                  {i + 1}
-                </option>
-              ))}
-            </select>
-          </div>
-          <p className="text-xs">Showing 1 of 10 out of 60 records</p>
 
-          <PageNavigation
-            num={4}
-            color="#f5f5f4"
-            bg="transparent"
-            activeColor="#7152F3"
-            activeBg="transparent"
-            borderColor="#7152F3"
-          />
-        </div>
+        <FooterNavigation
+          num={4}
+          color="#f5f5f4"
+          bg="transparent"
+          activeColor="#7152F3"
+          activeBg="transparent"
+          borderColor="#7152F3"
+        />
       </div>
     </div>
   );
 }
 
-export default CompaniesDetail;
+export default RegisteredCompanies;

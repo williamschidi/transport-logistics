@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useState } from "react";
-import StarRating from "../../../../utils/StarRating";
+import StarRating from "../../../utils/StarRating";
 
 const data = [
   {

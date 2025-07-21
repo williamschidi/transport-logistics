@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import PagesHeader from "../../../../utils/PagesHeader";
+import PagesHeader from "../../../utils/PagesHeader";
 import image from "../../../images/chidi.jpg";
-import Button from "../../../../utils/Button";
-import { NavLink, Outlet, useParams } from "react-router-dom";
+import Button from "../../../utils/Button";
+import { NavLink, Outlet, useNavigate, useParams } from "react-router-dom";
 // import OwnershipDetails from "../../../components/companyProfile/OwnerShipDetail";
 
 // const data = [
@@ -54,6 +54,12 @@ import { NavLink, Outlet, useParams } from "react-router-dom";
 function CompanyDashboard() {
   const { customerID } = useParams();
   // use this customerID to fetch customer data from DB
+  const navigate = useNavigate();
+
+  function navigateToEmployeeDetailPage() {
+    navigate(`/companies/${customerID}/employees`);
+  }
+
   return (
     <div className="flex-1 px-3 py-2">
       <PagesHeader>
@@ -91,7 +97,12 @@ function CompanyDashboard() {
             </div>
           </div>
           <div className="flex justify-center items-center gap-4">
-            <Button bg="#7152F3" color="#fff" width="7rem">
+            <Button
+              bg="#7152F3"
+              color="#fff"
+              width="7rem"
+              click={navigateToEmployeeDetailPage}
+            >
               <Icon icon="gridicons:user" width="16" height="16" />
               <span>Employee</span>
             </Button>
@@ -112,7 +123,7 @@ function CompanyDashboard() {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "bg-[#7152F3] flex items-center justitify-start gap-2 py-3 px-2"
+                      ? "bg-[#7152F3] flex items-center justify-start gap-2 py-3 px-2"
                       : "flex items-center justitify-start gap-2 py-3 px-2"
                   }
                   to="profile"

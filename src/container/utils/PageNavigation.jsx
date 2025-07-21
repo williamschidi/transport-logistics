@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
-function PageNavigation({
+function PageNAvigation({
   num = 2,
   bg = "#f5f5f4",
   color = "#0D99FF",
@@ -30,7 +30,6 @@ function PageNavigation({
       setCurData((cur) => cur - 1);
     }
   }
-
   return (
     <div
       style={{ backgroundColor: bg, color }}
@@ -63,4 +62,5 @@ function PageNavigation({
     </div>
   );
 }
-export default PageNavigation;
+
+export default PageNAvigation;
