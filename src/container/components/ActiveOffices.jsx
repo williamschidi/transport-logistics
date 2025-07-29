@@ -51,7 +51,7 @@ function ActiveOffices() {
   }
 
   return (
-    <div className="flex-1 flex justify-start items-center pl-2">
+    <div className="w-[47%] flex justify-start items-center pl-2">
       <div className="h-[23rem] w-[60%] rounded-md">
         <MapContainer
           center={mapPosition}
@@ -87,7 +87,7 @@ function ActiveOffices() {
           </Marker> */}
         </MapContainer>
       </div>
-      <div className="w-[15rem] border border-gray-700 rounded-md py-3">
+      <div className="w-[40%] border border-gray-700 rounded-md py-3">
         {data.map((x, i) => (
           <div
             className="w-[100%] py-2 pl-6 pr-3 space-y-2 text-sm border-b border-b-gray-700 hover:cursor-pointer"

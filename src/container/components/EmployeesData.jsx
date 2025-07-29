@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useState } from "react";
 import Button from "../utils/Button";
-import SearchBar from "../utils/SearchBar";
+import SearchBar1 from "../utils/SearchBar1";
 
 const data = [
   {
@@ -66,18 +66,10 @@ function EmployeesData() {
     setInputValue(e.target.value);
   }
   return (
-    <div className="flex-1">
+    <div className="w-[70%] ">
       <header className="flex justify-between items-center py-3">
         <p className="text-xs">Employees</p>
-        <SearchBar
-          color="#6b7280"
-          bg="#f5f5f4"
-          py="8px"
-          pl="32px"
-          inputWidth="14rem"
-          iconWidth="20"
-          left="8px"
-        />
+        <SearchBar1 size="md" iconSize="md" bg="#f5f5f4" color="#6b7280" />
 
         <div className="flex justify-between items-center gap-4">
           <div className="flex justify-center items-center gap-1">

@@ -77,13 +77,13 @@ function Rating() {
 
   return (
     <div className="pl-3">
-      <header className="flex justify-between items-center w-[60%]">
-        <span className="text-xs text-yellow-200 bg-[#7152F3] w-[4rem] h-[2rem] flex justify-center items-center rounded-md border]">
+      <header className="flex justify-between items-center lg:w-[60%] w-[70%]  lg:gap-3 md:gap-2 gap-[6px]">
+        <span className="md:text-xs text-[10px] text-yellow-200 bg-[#7152F3] w-[4rem] h-[2rem] flex justify-center items-center rounded-md border]">
           All Rating
         </span>
-        <div className="flex justify-between items-center gap-4">
+        <div className="flex justify-between items-center lg:gap-3 gap-2">
           <div
-            className={`w-[2.8rem] h-[2.8rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
+            className={`lg:w-[2.8rem] lg:h-[2.8rem] md:w-[2.4rem] md:h-[2.4rem] w-[2rem] h-[2rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
               ratingMetrix === 1 && "translate-y-[-10px] bg-[#7152F3]"
             }`}
             onClick={() => handleClick(1)}
@@ -94,7 +94,7 @@ function Rating() {
             />
           </div>
           <div
-            className={`w-[2.8rem] h-[2.8rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
+            className={`lg:w-[2.8rem] lg:h-[2.8rem] md:w-[2.4rem] md:h-[2.4rem] w-[2rem] h-[2rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
               ratingMetrix === 2 && "translate-y-[-10px] bg-[#7152F3]"
             }`}
             onClick={() => handleClick(2)}
@@ -105,7 +105,7 @@ function Rating() {
             />
           </div>
           <div
-            className={`w-[2.8rem] h-[2.8rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
+            className={`lg:w-[2.8rem] lg:h-[2.8rem] md:w-[2.4rem] md:h-[2.4rem] w-[2rem] h-[2rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
               ratingMetrix === 3 && "translate-y-[-10px] bg-[#7152F3]"
             }`}
             onClick={() => handleClick(3)}
@@ -116,7 +116,7 @@ function Rating() {
             />
           </div>
           <div
-            className={`w-[2.8rem] h-[2.8rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
+            className={`lg:w-[2.8rem] lg:h-[2.8rem] md:w-[2.4rem] md:h-[2.4rem] w-[2rem] h-[2rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
               ratingMetrix === 4 && "translate-y-[-10px] bg-[#7152F3]"
             }`}
             onClick={() => handleClick(4)}
@@ -127,7 +127,7 @@ function Rating() {
             />
           </div>
           <div
-            className={`w-[2.8rem] h-[2.8rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
+            className={`lg:w-[2.8rem] lg:h-[2.8rem] md:w-[2.4rem] md:h-[2.4rem] w-[2rem] h-[2rem] rounded-md border flex justify-center items-center hover:cursor-pointer ${
               ratingMetrix === 5 && "translate-y-[-10px] bg-[#7152F3]"
             }`}
             onClick={() => handleClick(5)}

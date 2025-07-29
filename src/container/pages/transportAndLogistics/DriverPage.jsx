@@ -1,8 +1,9 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import PagesHeader from "../../utils/PagesHeader";
-import SearchBar from "../../utils/SearchBar";
+// import SearchBar from "../../utils/SearchBar";
 import FooterNavigation from "../../utils/FooterNavigation";
 import Map from "../../components/Map";
+import SearchBar1 from "../../utils/SearchBar1";
 
 const data = [
   {
@@ -49,15 +50,15 @@ const data = [
 
 function DriverPage() {
   return (
-    <section className="flex-1  px-3 py-2">
+    <section className="flex-1  px-3 py-2 ">
       <PagesHeader>
         <h3 className="text-sm font-semibold">GIG Drivers and Trips</h3>
         <p className="text-[.6rem] font-light">GIG trips informations</p>
       </PagesHeader>
       <main>
         <div className="flex justify-between items-stretch border border-gray-600 rounded-md">
-          <div className="py-2 px-6 w-[20rem] space-y-3 ">
-            <SearchBar inputWidth="16.4rem" />
+          <div className="py-2 px-6 lg:w-[20rem] md:w-[18rem] w-[17rem] space-y-3 ">
+            <SearchBar1 iconSize="md" size="lg" />
             <div className="space-y-1 max-h-[25rem]  overflow-y-auto custom-scrollbar">
               <p className="text-xs font-semibold">Ongoing Delivery</p>
               {data.map((x, i) => (
@@ -67,11 +68,13 @@ function DriverPage() {
                 >
                   <div className="flex justify-between items-start pb-2">
                     <div className="flex flex-col justify-start items-start ">
-                      <span className="text-[.7rem]">Shipment number</span>
-                      <span className="text-sm font-bold py-1">
+                      <span className="md:text-[.7rem] text-[.6rem]">
+                        Shipment number
+                      </span>
+                      <span className="md:text-sm text-xs font-bold py-1">
                         {x.shipment}
                       </span>
-                      <span className="text-[.7rem] font-light text-gray-500">
+                      <span className="md:text-[.7rem] text-[.6rem] font-light text-gray-500">
                         {x.category}
                       </span>
                     </div>
@@ -91,10 +94,10 @@ function DriverPage() {
                         <div className="w-[.4rem] h-[.4rem] rounded-full bg-[#0EBC93]"></div>
                       </div>
                       <div className="flex flex-col">
-                        <span className="text-[.8rem] font-semibold">
+                        <span className="md:text-[.8rem] text-[.7rem] font-semibold">
                           {x.from}
                         </span>
-                        <span className="text-[.65rem] font-light">
+                        <span className="md:text-[.65rem] text-[.6rem] font-light">
                           Rd. Santa Ana, Illinois 85486
                         </span>
                       </div>
@@ -109,10 +112,10 @@ function DriverPage() {
                         />
                       </div>
                       <div className="flex flex-col">
-                        <span className="text-[.8rem] font-semibold">
+                        <span className="md:text-[.8rem] text-[.7rem] font-semibold">
                           {x.to}
                         </span>
-                        <span className="text-[.65rem] font-light">
+                        <span className="md:text-[.65rem] text-[.6rem] font-light">
                           Rd. Santa Ana, Illinois 85486
                         </span>
                       </div>
@@ -123,11 +126,13 @@ function DriverPage() {
                     <div className="">
                       <div></div>
                       <div className="flex flex-col justify-center items-start">
-                        <span className="text-[.65rem]">Client</span>
-                        <span className="text-[.8rem] font-semibold pt-1">
+                        <span className="md:text-[.65rem] text-[.6rem]">
+                          Client
+                        </span>
+                        <span className="md:text-[.8rem] text-[.7rem] font-semibold pt-1">
                           {x.client}
                         </span>
-                        <span className="text-[.65rem] font-light text-gray-500">
+                        <span className="md:text-[.65rem] text-[.6rem] font-light text-gray-500">
                           {x.company}
                         </span>
                       </div>

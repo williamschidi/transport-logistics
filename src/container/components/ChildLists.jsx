@@ -5,7 +5,10 @@ function ChildLists({ items }) {
   return (
     <>
       {items.map((item, i) => (
-        <li className="rounded-md text-stone-100 text-sm" key={i}>
+        <li
+          className="rounded-md text-stone-100 md:text-sm text-[12px]"
+          key={i}
+        >
           <NavLink
             to={item.path}
             className={({ isActive }) =>

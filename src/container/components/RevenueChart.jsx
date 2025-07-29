@@ -76,23 +76,23 @@ function RevenueChart() {
           />
         </div>
         <div className="flex justify-between items-center ">
-          <div className="flex flex-col justify-center items-center text-sm py-2 border w-[10rem]">
+          <div className="flex flex-col justify-center items-center lg:text-sm text-xs py-2 border w-[10rem]">
             <span>121721</span>
-            <span> Number of Drivers</span>
+            <span> Drivers</span>
           </div>
-          <div className="flex flex-col justify-center items-center text-sm py-2 border w-[10rem]">
+          <div className="flex flex-col justify-center items-center lg:text-sm text-xs py-2 border w-[10rem]">
             <span>#250,253</span>
             <span>Ride Revenue</span>
           </div>
-          <div className="flex flex-col justify-center items-center text-sm py-2 border w-[10rem]">
+          <div className="flex flex-col justify-center items-center lg:text-sm text-xs py-2 border w-[10rem]">
             <span>12725</span>
             <span>Active Drivers</span>
           </div>
-          <div className="flex flex-col justify-center items-center text-sm py-2 border w-[10rem]">
+          <div className="flex flex-col justify-center items-center lg:text-sm text-xs py-2 border w-[10rem]">
             <span>#250523</span>
             <span>Revenue</span>
           </div>
-          <div className="flex flex-col justify-center items-center  text-sm py-2 border w-[10rem]">
+          <div className="flex flex-col justify-center items-center  lg:text-sm text-xs py-2 border w-[10rem]">
             <span>12750</span>
             <span>Active Drivers</span>
           </div>

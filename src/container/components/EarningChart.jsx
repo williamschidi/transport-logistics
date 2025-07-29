@@ -8,7 +8,7 @@ function EarningChart() {
       <p className="py-3 px-4 text-xs">Total Earning</p>
       <div>
         <p className="text-center font-bold text-2xl pt-2 pb-3">#6743.00</p>
-        <div className="flex justify-center items-center gap-6 text-xs">
+        <div className="flex justify-center items-center lg:gap-6 md:gap-4 gap-3 text-xs">
           <button
             onClick={() => setPeriod("day")}
             className={`pb-1 w-[2.4rem] ${

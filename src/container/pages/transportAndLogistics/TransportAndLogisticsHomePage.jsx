@@ -9,13 +9,13 @@ import SalesTrack from "../../components/SalesTrack";
 import EmployeesData from "../../components/EmployeesData";
 
 import HrProfileAndNotification from "../../utils/HrProfileAndNotification";
-import SearchBar from "../../utils/SearchBar";
+import SearchBar1 from "../../utils/SearchBar1";
 
 function TransportAndLogisticsHomePage() {
   return (
     <section className="flex-1 h-screen flex flex-col overflow-y-auto ">
-      <header className="flex justify-between items-center py-2 px-1">
-        <SearchBar />
+      <header className="flex justify-between items-center py-2 pl-2 pr-4">
+        <SearchBar1 size="md" iconSize="md" />
         <HrProfileAndNotification />
       </header>
       <main className=" flex-1 overflow-y-auto px-2 pb-2 max-h-screen custom-scrollbar">
@@ -33,7 +33,7 @@ function TransportAndLogisticsHomePage() {
           <ChatSection />
           <OrderSection />
         </div>
-        <div className="py-4 flex justify-start items-start gap-2">
+        <div className="pt-4 pb-2 flex justify-start items-start gap-2 w-[100%]">
           <SalesTrack />
           <EmployeesData />
         </div>

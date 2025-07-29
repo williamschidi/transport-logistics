@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Button from "../../../utils/Button";
-import SearchBar from "../../../utils/SearchBar";
 import FooterNavigation from "../../../utils/FooterNavigation";
 import image from "../../../images/chidi.jpg";
 import PagesHeader from "../../../utils/PagesHeader";
 import Action from "../../../components/Action";
 import Edit from "../../../components/EditDriverDetails";
+import SearchBar1 from "../../../utils/SearchBar1";
 
 const data = [
   {
@@ -153,10 +153,10 @@ function EmployeeDetails() {
       </PagesHeader>
       <section className="border border-gray-700 rounded-md max-h-[31rem] overflow-y-auto custom-scrollbar">
         <header className="flex justify-between items-center px-2 py-2 ">
-          <SearchBar />
+          <SearchBar1 size="md" iconSize="md" />
 
           <div className="flex justify-between items-center gap-4">
-            <Button width="9rem" bg="#7152F3">
+            <Button btnSize="lg" bg="#7152F3">
               <Icon icon="ei:plus" width="20" height="20" />
               <span>Add new Employee</span>
             </Button>
