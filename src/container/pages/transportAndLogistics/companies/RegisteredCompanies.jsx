@@ -1,12 +1,11 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import PagesHeader from "../../../utils/PagesHeader";
-import SearchBar from "../../../utils/SearchBar";
 import Button from "../../../utils/Button";
 import Action from "../../../components/Action";
 import image from "../../../images/chidi.jpg";
 import { NavLink } from "react-router-dom";
 import FooterNavigation from "../../../utils/FooterNavigation";
-import EmployeeDetails from "./EmployeeDetails";
+import SearchBar1 from "../../../utils/SearchBar1";
 
 const orders = [
   {
@@ -110,13 +109,13 @@ function RegisteredCompanies() {
       </PagesHeader>
       <div className="border border-gray-700 rounded-md max-h-[31rem] overflow-y-auto custom-scrollbar">
         <div className="flex justify-between items-center px-2 py-2 ">
-          <SearchBar />
+          <SearchBar1 />
           <div className="flex justify-between items-center gap-4">
             <Button color="#0d99ff" border="none">
               <Icon icon="la:file-excel-solid" width="12" height="12" />
               Export Report
             </Button>
-            <Button width="9rem" bg="#7152F3">
+            <Button btnSize="lg" bg="#7152F3">
               <Icon icon="formkit:add" width="12" height="12" />
               Add new company
             </Button>

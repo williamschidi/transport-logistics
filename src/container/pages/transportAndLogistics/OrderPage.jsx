@@ -132,7 +132,7 @@ function OrderPage() {
         <div className="flex justify-end items-center gap-4 pb-4">
           <Button
             bg={activeTab === "schedule" ? "#7152F3" : "#6B7280"}
-            width="7rem"
+            btnSize="md"
             click={() => handleClick("schedule")}
           >
             Sheduled Order
