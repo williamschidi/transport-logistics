@@ -7,6 +7,7 @@ import PagesHeader from "../../../utils/PagesHeader";
 import Action from "../../../components/Action";
 import Edit from "../../../components/EditDriverDetails";
 import SearchBar1 from "../../../utils/SearchBar1";
+import { useParams } from "react-router-dom";
 
 const data = [
   {
@@ -134,6 +135,8 @@ const data = [
 function EmployeeDetails() {
   const [showPopUp, setShowPopUp] = useState(false);
   const [selectedEmployee, setSelectedEmployee] = useState(null);
+  const { companyID } = useParams();
+  console.log(companyID);
 
   function handleOpenPopUp(x) {
     setShowPopUp(true);

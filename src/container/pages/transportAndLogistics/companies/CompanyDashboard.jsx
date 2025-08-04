@@ -3,61 +3,16 @@ import PagesHeader from "../../../utils/PagesHeader";
 import image from "../../../images/chidi.jpg";
 import Button from "../../../utils/Button";
 import { NavLink, Outlet, useNavigate, useParams } from "react-router-dom";
-// import OwnershipDetails from "../../../components/companyProfile/OwnerShipDetail";
-
-// const data = [
-//   {
-//     title: "Ownership Information",
-//     details: {
-//       firstName: "Brooklyn",
-//       lastName: "Simmon",
-//       mobileNumber: "0706883789",
-//       email: "brooklyn@gmail.com",
-//       dateOfBirth: "July 14 1995",
-//       nIN: "2334409876",
-//       gender: "Male",
-//       nationality: "Nigeria",
-//       address: "442 Golf Estate",
-//       city: "Enugu",
-//       state: "Enugu State",
-//       zipCode: "436101",
-//     },
-//   },
-//   {
-//     title: "Company Information",
-//     details: {
-//       companyID: "2341908",
-//       companyName: "God Is Good Motors",
-//       companyType: "Logistics",
-//       email: "GIG.tis.example@gmail.com",
-//       registration: "TRC-12345",
-//       designation: "Terminal",
-//       workingDays: "5 days",
-//       joiningDate: "july 22,2022",
-//       officeLocation: "234 Mainland Trans-Ekulu Enugu",
-//     },
-//   },
-//   { title: "Documents", details: {} },
-//   {
-//     title: "Account Details",
-//     details: {
-//       ownership: "Brooklyn James",
-//       bankName: "GTB",
-//       accountName: "GIG Logistics LTD",
-//       accountNumber: "21500567902",
-//       currency: "USDT",
-//       accountAddress: "x0hjj7klsd2pdjnd2kj37doidmk08sdu",
-//     },
-//   },
-// ];
 
 function CompanyDashboard() {
-  const { customerID } = useParams();
+  const { companyID } = useParams();
   // use this customerID to fetch customer data from DB
   const navigate = useNavigate();
 
   function navigateToEmployeeDetailPage() {
-    navigate(`/companies/${customerID}/employees`);
+    navigate(
+      `/transport-and-logistics/companies/${companyID}/employees-details`
+    );
   }
 
   return (
@@ -107,9 +62,8 @@ function CompanyDashboard() {
               <span>Employee</span>
             </Button>
             <Button bg="#7152F3" color="#fff" width="7rem">
-              <Icon icon="lsicon:edit-outline" width="16" height="16" />{" "}
-              <span>Edit</span>
-              Profile
+              <Icon icon="lsicon:edit-outline" width="16" height="16" />
+              <span>Edit Profile</span>
             </Button>
             <Button bg="#7152F3" color="#fff">
               Suspended
