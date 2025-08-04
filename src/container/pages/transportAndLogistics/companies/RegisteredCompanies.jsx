@@ -138,7 +138,7 @@ function RegisteredCompanies() {
           <div>
             {orders.map((order, i) => (
               <NavLink
-                to={`/companies/${order.companyID}`}
+                to={`${order.companyID}`}
                 key={i}
                 className="flex justify-between items-center text-[.6rem] py-2 px-2 hover:bg-gray-800 border-b-[1px] border-b-gray-800 hover:cursor-pointer"
               >

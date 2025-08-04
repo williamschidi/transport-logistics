@@ -5,7 +5,6 @@ import ChildLists from "../components/ChildLists";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 import MainArea from "../components/MainArea";
-import { NavLink } from "react-router-dom";
 
 function Layout() {
   const [currentTab, setCurrentTab] = useState("");
@@ -17,6 +16,7 @@ function Layout() {
     <main className="bg-gray-900 max-h-screen overflow-auto flex items-start justify-start text-stone-100 ">
       <Aside>
         <List
+          to="/dashboard"
           dataSet="home"
           icon={<DashboardIcon className={iconSize} />}
           title={<span className={listTextStyle}>Dashboard</span>}
@@ -26,6 +26,7 @@ function Layout() {
           <ChildLists items={[]} />
         </List>
         <List
+          to="/all-employees"
           icon={
             <Icon
               icon="ci:users-group"
@@ -42,9 +43,9 @@ function Layout() {
           <ChildLists items={[]} />
         </List>
         <List
+          to="/all-department"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
-          setDisplayTab={setCurrentTab}
           dataSet="allDepartment"
           icon={
             <Icon
@@ -59,6 +60,7 @@ function Layout() {
           <ChildLists items={[]} />
         </List>
         <List
+          to="/attendants"
           dataSet="attendants"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
@@ -76,6 +78,7 @@ function Layout() {
         </List>
 
         <List
+          to="/payroll"
           dataSet="payroll"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
@@ -93,10 +96,10 @@ function Layout() {
         </List>
 
         <List
+          to="/transport-and-logistics"
           dataSet="transportAndLogistics"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
-          // setDisplayTab={setDisplayTab}
           icon={
             <Icon
               icon="fluent:vehicle-truck-bag-24-regular"
@@ -105,25 +108,19 @@ function Layout() {
               className={iconSize}
             />
           }
-          title={
-            <span className={listTextStyle}>
-              <NavLink to="/transportAndLogistics">
-                Transport And Logistics
-              </NavLink>
-            </span>
-          }
+          title={<span className={listTextStyle}>Transport And Logistics</span>}
         >
           <ChildLists
             items={[
-              { name: "Companies", path: "companies" },
-
-              { name: "Driver", path: "driver" },
-              { name: "Order", path: "order" },
+              { name: "Companies", path: "transport-and-logistics/companies" },
+              { name: "Driver", path: "transport-and-logistics/driver" },
+              { name: "Order", path: "transport-and-logistics/order" },
             ]}
           />
         </List>
 
         <List
+          to="/e-commerce"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
           dataSet="eCommerce"
@@ -141,6 +138,7 @@ function Layout() {
         </List>
 
         <List
+          to="/jusio-mlm"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
           dataSet="jusioMlm"
@@ -158,6 +156,7 @@ function Layout() {
         </List>
 
         <List
+          to="/brain-block"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
           dataSet="brainBlock"
@@ -175,6 +174,7 @@ function Layout() {
         </List>
 
         <List
+          to="/candidates"
           dataSet="candidates"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
@@ -192,6 +192,7 @@ function Layout() {
         </List>
 
         <List
+          to="/leaves"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
           dataSet="leaves"
@@ -202,6 +203,7 @@ function Layout() {
         </List>
 
         <List
+          to="/holiday"
           dataSet="holiday"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
@@ -219,6 +221,7 @@ function Layout() {
         </List>
 
         <List
+          to="/operations"
           dataSet="operations"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
@@ -236,6 +239,7 @@ function Layout() {
         </List>
 
         <List
+          to="/office-budget"
           dataSet="officeBudget"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
@@ -253,6 +257,7 @@ function Layout() {
         </List>
 
         <List
+          to="/stock-and-inventory"
           dataSet="stock&Inventory"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
@@ -270,6 +275,7 @@ function Layout() {
         </List>
 
         <List
+          to="/ticket"
           dataSet="ticket"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
@@ -287,6 +293,7 @@ function Layout() {
         </List>
 
         <List
+          to="/maintenance"
           dataSet="maintenance"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
@@ -304,6 +311,7 @@ function Layout() {
         </List>
 
         <List
+          to="/billing"
           dataSet="billing"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
@@ -316,6 +324,7 @@ function Layout() {
         </List>
 
         <List
+          to="/setting"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
           dataSet="setting"
@@ -333,6 +342,7 @@ function Layout() {
         </List>
 
         <List
+          to="/payment-and-transactions"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}
           dataSet="payment&Transactions"
@@ -350,6 +360,7 @@ function Layout() {
         </List>
 
         <List
+          to="/messages"
           dataSet="messages"
           setCurrentTab={setCurrentTab}
           currentTab={currentTab}

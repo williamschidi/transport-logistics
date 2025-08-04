@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function List({
+  to,
   children,
   icon,
   title,
   dataSet,
   setCurrentTab,
   currentTab,
-  setDisplayTab,
 }) {
   const [show, setShow] = useState(false);
 
@@ -31,13 +32,18 @@ function List({
         data-tab={dataSet}
         onClick={(e) => handleClick(e, dataSet)}
         className={`
- hover:rounded-r-md border-l-2 border-l-gray-800 transition-all duration-200 lg:px-2 md:px-1 pl-[2px]  pr-0 py-2 flex items-center justify-start lg:gap-3 md:gap-2 gap-[4px] hover:bg-gray-700 lg:w-[13rem] w-[11.8rem] ${
+ hover:rounded-r-md border-l-2 border-l-gray-800 transition-all duration-200  md:px-1 pl-[2px]  pr-0 py-2  hover:bg-gray-700 lg:w-[12.3rem] w-[11.8rem] ${
    currentTab === dataSet
      ? "text-purple-500 border-l-2 border-l-purple-500 bg-gray-700 rounded-sm rounded-r-md"
      : ""
  }`}
       >
-        {icon} {title}
+        <NavLink
+          to={to}
+          className="flex items-center justify-start  md:gap-2 gap-[4px]"
+        >
+          {icon} {title}
+        </NavLink>
       </button>
       {show && currentTab === dataSet ? (
         <ul
