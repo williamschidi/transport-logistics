@@ -16,7 +16,7 @@ function Layout() {
     <main className="bg-gray-900 max-h-screen overflow-auto flex items-start justify-start text-stone-100 ">
       <Aside>
         <List
-          to="/dashboard"
+          to="/"
           dataSet="home"
           icon={<DashboardIcon className={iconSize} />}
           title={<span className={listTextStyle}>Dashboard</span>}
@@ -24,6 +24,29 @@ function Layout() {
           currentTab={currentTab}
         >
           <ChildLists items={[]} />
+        </List>
+        <List
+          to="/transport-and-logistics"
+          dataSet="transportAndLogistics"
+          setCurrentTab={setCurrentTab}
+          currentTab={currentTab}
+          icon={
+            <Icon
+              icon="fluent:vehicle-truck-bag-24-regular"
+              width="24"
+              height="24"
+              className={iconSize}
+            />
+          }
+          title={<span className={listTextStyle}>Transport And Logistics</span>}
+        >
+          <ChildLists
+            items={[
+              { name: "Companies", path: "transport-and-logistics/companies" },
+              { name: "Driver", path: "transport-and-logistics/driver" },
+              { name: "Order", path: "transport-and-logistics/order" },
+            ]}
+          />
         </List>
         <List
           to="/all-employees"
@@ -93,30 +116,6 @@ function Layout() {
           title={<p className={listTextStyle}>Payroll</p>}
         >
           <ChildLists items={[]} />
-        </List>
-
-        <List
-          to="/transport-and-logistics"
-          dataSet="transportAndLogistics"
-          setCurrentTab={setCurrentTab}
-          currentTab={currentTab}
-          icon={
-            <Icon
-              icon="fluent:vehicle-truck-bag-24-regular"
-              width="24"
-              height="24"
-              className={iconSize}
-            />
-          }
-          title={<span className={listTextStyle}>Transport And Logistics</span>}
-        >
-          <ChildLists
-            items={[
-              { name: "Companies", path: "transport-and-logistics/companies" },
-              { name: "Driver", path: "transport-and-logistics/driver" },
-              { name: "Order", path: "transport-and-logistics/order" },
-            ]}
-          />
         </List>
 
         <List

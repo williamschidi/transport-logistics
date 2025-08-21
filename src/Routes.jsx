@@ -21,6 +21,7 @@ import Chat from "./container/pages/jusioMlm/Chat";
 import Library from "./container/pages/jusioMlm/Library";
 import Blocks from "./container/pages/jusioMlm/Blocks";
 import JusioIndex from "./container/pages/jusioMlm/JusioIndex";
+import Dashbord from "./container/pages/Dashboard";
 
 function AppRoutes() {
   return (
@@ -52,6 +53,7 @@ function AppRoutes() {
           <Route path="order" element={<Order />} />
           <Route path="driver" element={<Driver />} />
         </Route>
+        <Route index element={<Dashbord />} />
         <Route path="jusio-mlm" element={<JusioMlm />}>
           <Route index element={<JusioIndex />} />
           <Route path="chat" element={<Chat />} />
